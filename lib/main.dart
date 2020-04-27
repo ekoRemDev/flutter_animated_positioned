@@ -10,11 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bingo Demo',
+      title: 'Animation Demo',
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: MyHomePage(title: 'Bingo Demo'),
+      home: MyHomePage(title: 'Animation Demo'),
     );
   }
 }
@@ -126,310 +126,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin{
       body: Stack(
         children: <Widget>[
 
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-      children: <Widget>[
-      Container(
-      height: MediaQuery.of(context).size.height * 0.65,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-
-            // 1 Ball
-//          Container(
-//            alignment: animationMove1.value,
-//            child:
-//            Transform.translate(
-//              offset: Offset(1.0, -1.0),
-//
-//              child: Container(
-//                child: Center(child: Text("1",style: TextStyle(fontSize: 48),)),
-//                alignment: animationMove1.value,
-//                height: MediaQuery.of(context).size.height * 0.15,
-//                width: MediaQuery.of(context).size.width * 0.15,
-//                decoration: BoxDecoration(
-//                    color: animation.value, shape: BoxShape.circle),
-//              ),
-//            ),
-//
-//          ),
-            Container(
-              alignment: animationMove1.value,
-              child:
-              Transform.translate(
-                offset: Offset(1.0, -1.0),
-
-                child: Transform.rotate(
-                  angle: animationController.value * 60,
-                  child: Container(
-
-                      child: Center(child: Text(" ",style: TextStyle(fontSize: 48),)),
-                      alignment: animationMove3.value,
-                      height: 50,
-//                  height: MediaQuery.of(context).size.height * 0.15,
-                      width: 50,
-//                  width: MediaQuery.of(context).size.width * 0.15,
-//                  decoration: BoxDecoration(
-//                      color: animation.value, shape: BoxShape.circle),
-
-                      decoration: new BoxDecoration(
-                        image: new DecorationImage(
-                          image: new AssetImage('assets/bingo_ball_90.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      )
-
-
-                  ),
-                ),
-              ),
-
-            ),
-
-
-
-            // 2 Ball
-//          Container(
-//            alignment: animationMove2.value,
-//            child:
-//            Transform.translate(
-//              offset: Offset(1.0, -1.0),
-//
-//              child: Container(
-//                child: Center(child: Text("2",style: TextStyle(fontSize: 48),)),
-//                alignment: animationMove2.value,
-//                height: MediaQuery.of(context).size.height * 0.15,
-//                width: MediaQuery.of(context).size.width * 0.15,
-//                decoration: BoxDecoration(
-//                    color: animation.value, shape: BoxShape.circle),
-//              ),
-//            ),
-//
-//          ),
-            Container(
-              alignment: animationMove2.value,
-              child:
-              Transform.translate(
-                offset: Offset(1.0, -1.0),
-
-                child: Transform.rotate(
-                  angle: animationController.value * 45,
-                  child: Container(
-
-                      child: Center(child: Text(" ",style: TextStyle(fontSize: 48),)),
-                      alignment: animationMove3.value,
-                      height: 50,
-//                  height: MediaQuery.of(context).size.height * 0.15,
-                      width: 50,
-//                  width: MediaQuery.of(context).size.width * 0.15,
-//                  decoration: BoxDecoration(
-//                      color: animation.value, shape: BoxShape.circle),
-
-                      decoration: new BoxDecoration(
-                        image: new DecorationImage(
-                          image: new AssetImage('assets/bingo_ball_90.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      )
-
-
-                  ),
-                ),
-              ),
-
-            ),
-
-
-            // 3 Ball
-            Container(
-              alignment: animationMove3.value,
-              child:
-              Transform.translate(
-                offset: Offset(1.0, -1.0),
-
-                child: Transform.rotate(
-                  angle: animationController.value * 30,
-                  child: Container(
-
-                    child: Center(child: Text(" ",style: TextStyle(fontSize: 48),)),
-                    alignment: animationMove3.value,
-                    height: 50,
-//                  height: MediaQuery.of(context).size.height * 0.15,
-                    width: 50,
-//                  width: MediaQuery.of(context).size.width * 0.15,
-//                  decoration: BoxDecoration(
-//                      color: animation.value, shape: BoxShape.circle),
-
-                      decoration: new BoxDecoration(
-                        image: new DecorationImage(
-                          image: new AssetImage('assets/bingo_ball_90.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      )
-
-
-                  ),
-                ),
-              ),
-
-            ),
-
-
-
-
-            // 4 Ball
-            Container(
-              alignment: animationMove4.value,
-              child:
-              Transform.translate(
-                offset: Offset(1.0, -1.0),
-
-                child: Transform.rotate(
-                  angle: animationController.value * 50,
-                  child: Container(
-
-                      child: Center(child: Text("",style: TextStyle(fontSize: 48),)),
-                      alignment: animationMove3.value,
-                      height: 50,
-//                  height: MediaQuery.of(context).size.height * 0.15,
-                      width: 50,
-//                  width: MediaQuery.of(context).size.width * 0.15,
-//                  decoration: BoxDecoration(
-//                      color: animation.value, shape: BoxShape.circle),
-
-                      decoration: new BoxDecoration(
-                        image: new DecorationImage(
-                          image: new AssetImage('assets/bingo_ball_90.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      )
-
-
-                  ),
-                ),
-              ),
-
-            ),
-
-
-
-            // 5 Ball
-            Container(
-              alignment: animationMove5.value,
-              child:
-              Transform.translate(
-                offset: Offset(1.0, -1.0),
-
-                child: Transform.rotate(
-                  angle: animationController.value * 10,
-                  child: Container(
-
-                      child: Center(child: Text("",style: TextStyle(fontSize: 48),)),
-                      alignment: animationMove3.value,
-                      height: 50,
-//                  height: MediaQuery.of(context).size.height * 0.15,
-                      width: 50,
-//                  width: MediaQuery.of(context).size.width * 0.15,
-//                  decoration: BoxDecoration(
-//                      color: animation.value, shape: BoxShape.circle),
-
-                      decoration: new BoxDecoration(
-                        image: new DecorationImage(
-                          image: new AssetImage('assets/bingo_ball_90.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      )
-
-
-                  ),
-                ),
-              ),
-
-            ),
-
-
-            // 6 Ball
-            Container(
-              alignment: animationMove6.value,
-              child:
-              Transform.translate(
-                offset: Offset(1.0, -1.0),
-
-                child: Transform.rotate(
-                  angle: animationController.value * 70,
-                  child: Container(
-
-                      child: Center(child: Text("",style: TextStyle(fontSize: 48),)),
-                      alignment: animationMove3.value,
-                      height: 50,
-//                  height: MediaQuery.of(context).size.height * 0.15,
-                      width: 50,
-//                  width: MediaQuery.of(context).size.width * 0.15,
-//                  decoration: BoxDecoration(
-//                      color: animation.value, shape: BoxShape.circle),
-
-                      decoration: new BoxDecoration(
-                        image: new DecorationImage(
-                          image: new AssetImage('assets/bingo_ball_90.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      )
-
-
-                  ),
-                ),
-              ),
-
-            ),
-
-
-
-            // Square 1
-//          Container(
-////            alignment: animation2.value,
-//            child:
-//            Transform.rotate(
-//              angle: animationController.value * 0,
-//              child: Container(
-//                child: Center(child: Text("A",style: TextStyle(fontSize: animation3.value*24),)),
-//                height: 50.0,
-//                width: 50.0,
-////                color: animation.value,
-//                color: animationColor1.value,
-//
-//              ),
-//            ),
-//
-//          ),
-
-            // Square 2
-//          Container(
-////            alignment: animation2.value,
-//            child:
-//            Transform.rotate(
-//              angle: animationController.value * 1,
-//              child: Container(
-//                child: Center(child: Text("B",style: TextStyle(fontSize: animation3.value*24),)),
-//                height: 50.0,
-//                width: 50.0,
-////                color: animation.value,
-//                color: animationColor2.value,
-//
-//              ),
-//            ),
-//
-//          ),
-
-
-
-        ],
-      ),
-    ),
-    ],
-    ),
-          ),
-
+          // Curve
           Column(
         children: <Widget>[
 
@@ -446,6 +143,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin{
         ],
       ),
 
+          // Button
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -483,6 +181,31 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin{
 
       ],
     ),
+
+          // Balls
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: <Widget>[
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.65,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+
+                      bingoBall(1, animationMove1, animationController),
+                      bingoBall(2, animationMove2, animationController),
+                      bingoBall(3, animationMove3, animationController),
+                      bingoBall(4, animationMove4, animationController),
+                      bingoBall(5, animationMove5, animationController),
+                      bingoBall(6, animationMove6, animationController),
+
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
 
         ],
       ),

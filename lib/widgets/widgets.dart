@@ -18,6 +18,47 @@ Widget PageBackground() {
 }
 
 
+Widget bingoBall(int ballNo, Animation animation, AnimationController animationController){
+  return Container(
+    alignment: animation.value,
+    child:
+    GestureDetector(
+      onTap: (){
+        print("Tapped Ball No : $ballNo");
+      },
+      child: Transform.translate(
+        offset: Offset(1.0, -1.0),
+
+        child: Transform.rotate(
+          angle: animationController.value * 60,
+          child: Container(
+
+              child: Center(child: Text(" ",style: TextStyle(fontSize: 48),)),
+              alignment: animation.value,
+              height: 50,
+//                  height: MediaQuery.of(context).size.height * 0.15,
+              width: 50,
+//                  width: MediaQuery.of(context).size.width * 0.15,
+//                  decoration: BoxDecoration(
+//                      color: animation.value, shape: BoxShape.circle),
+
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new AssetImage('assets/bingo_ball_90.png'),
+                  fit: BoxFit.cover,
+                ),
+              )
+
+
+          ),
+        ),
+      ),
+    ),
+
+  );
+}
+
+
 
 
 class CurvePainter extends CustomPainter {
